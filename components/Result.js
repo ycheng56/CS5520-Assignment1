@@ -29,6 +29,7 @@ function Select(props) {
             title="I'am Done"
             color={color.sub}
             onPress={() => {
+              props.setAnswer(null);
               props.setGameOver(true);
               props.setModal(false);
             }}
@@ -69,6 +70,7 @@ export default function Result({
   modal,
   setModal,
   setGameOver,
+  setAnswer,
 }) {
   return (
     <Modal visible={modal}>
@@ -80,6 +82,7 @@ export default function Result({
             answer={answer}
             setModal={setModal}
             setGameOver={setGameOver}
+            setAnswer={setAnswer}
           />
         </View>
       </LinearGradient>

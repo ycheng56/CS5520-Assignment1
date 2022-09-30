@@ -19,8 +19,6 @@ export default function App() {
   const [guess, setGuess] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [gameOver, setGameOver] = useState(false);
-  // console.log("answer " + answer);
-  // console.log("guess " + guess);
 
   const resultShow = (boolean) => {
     if (boolean) {
@@ -79,6 +77,7 @@ export default function App() {
           modal={modalVisible}
           setModal={resultShow}
           setGameOver={gameEnd}
+          setAnswer={(newAnswer)=>{setAnswer(newAnswer)}}
         />
       </SafeAreaView>
 
